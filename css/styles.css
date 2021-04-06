@@ -40,6 +40,104 @@ body {
   border-radius: 30px;
   border: 6px solid #575757;
   z-index: 11;
+  -webkit-animation: shake 0s;
+          animation: shake 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: translate(1px, 1px) rotate(0deg);
+            transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-10deg);
+            transform: translate(-1px, -2px) rotate(-10deg);
+  }
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(10deg);
+            transform: translate(-3px, 0px) rotate(10deg);
+  }
+  30% {
+    -webkit-transform: translate(3px, 2px) rotate(0deg);
+            transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(15deg);
+            transform: translate(1px, -1px) rotate(15deg);
+  }
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-15deg);
+            transform: translate(-1px, 2px) rotate(-15deg);
+  }
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    -webkit-transform: translate(3px, 1px) rotate(-19deg);
+            transform: translate(3px, 1px) rotate(-19deg);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(19deg);
+            transform: translate(-1px, -1px) rotate(19deg);
+  }
+  90% {
+    -webkit-transform: translate(1px, 2px) rotate(0deg);
+            transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg);
+            transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: translate(1px, 1px) rotate(0deg);
+            transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-10deg);
+            transform: translate(-1px, -2px) rotate(-10deg);
+  }
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(10deg);
+            transform: translate(-3px, 0px) rotate(10deg);
+  }
+  30% {
+    -webkit-transform: translate(3px, 2px) rotate(0deg);
+            transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(15deg);
+            transform: translate(1px, -1px) rotate(15deg);
+  }
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-15deg);
+            transform: translate(-1px, 2px) rotate(-15deg);
+  }
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    -webkit-transform: translate(3px, 1px) rotate(-19deg);
+            transform: translate(3px, 1px) rotate(-19deg);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(19deg);
+            transform: translate(-1px, -1px) rotate(19deg);
+  }
+  90% {
+    -webkit-transform: translate(1px, 2px) rotate(0deg);
+            transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg);
+            transform: translate(1px, -2px) rotate(-1deg);
+  }
 }
 
 .washing-machine .top-sector {
@@ -68,6 +166,7 @@ body {
   background-color: #e7e7e7;
   border: 6px solid #575757;
   border-radius: 20px;
+  outline: none;
 }
 
 .washing-machine .top-sector .top-right {
@@ -88,8 +187,8 @@ body {
 .washing-machine .top-sector .top-right .left-btn {
   width: 3rem;
   height: 3rem;
+  background-color: #abe2b0;
   margin-right: 1rem;
-  background-color: #e7e7e7;
   border: 5px solid #575757;
   border-radius: 50px;
   outline: none;
@@ -99,7 +198,7 @@ body {
 .washing-machine .top-sector .top-right .right-btn {
   width: 3rem;
   height: 3rem;
-  background-color: #e7e7e7;
+  background-color: #e2abab;
   border: 5px solid #575757;
   border-radius: 50%;
   outline: none;
@@ -147,29 +246,47 @@ body {
   border: 6px solid #575757;
   border-radius: 50%;
   z-index: 111;
-  -webkit-animation: rotation 5s infinite linear;
-          animation: rotation 5s infinite linear;
+  -webkit-animation: rotation infinite linear;
+          animation: rotation infinite linear;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
 }
 
 @-webkit-keyframes rotation {
-  from {
+  0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
+  25% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  50% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 
 @keyframes rotation {
-  from {
+  0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
+  25% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  50% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 /*# sourceMappingURL=styles.css.map */
